@@ -5,5 +5,5 @@ export default Model.extend({
 	title: DS.attr(),
 	duration: DS.attr(),
 	description: DS.attr(),
-	photos: DS.attr(),
+	images: DS.attr(),
 });

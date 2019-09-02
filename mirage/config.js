@@ -9,7 +9,11 @@ export default function() {
         attributes: {
           title: "Flow Basics (Level 1)",
           duration: "75",
-          description: "These Level 1 classes are perfect for those that are brand new to yoga, new to flow style yoga, or coming back from a hiatus or injury. Classes include both flow and static postures, and though they don’t move quickly, students should come prepared to MOVE!"
+          description: "These Level 1 classes are perfect for those that are brand new to yoga, new to flow style yoga, or coming back from a hiatus or injury. Classes include both flow and static postures, and though they don’t move quickly, students should come prepared to MOVE!",
+          images: [{
+              src: "http://r.ddmcdn.com/s_f/o_1/cx_462/cy_245/cw_1349/ch_1349/w_720/APL/uploads/2015/06/caturday-shutterstock_149320799.jpg"
+            }
+          ]
         }
       },
       {
