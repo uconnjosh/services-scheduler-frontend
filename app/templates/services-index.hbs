@@ -1,4 +1,12 @@
 <h1>
-	{{t 'services_type'}}	
+	{{t "services_type"}}	
 </h1>
+
+<ul>
+	{{#each model as |service|}}
+		<li>
+			{{service.title}} | {{service.duration}}
+		</li>
+	{{/each}}
+</ul>
 
