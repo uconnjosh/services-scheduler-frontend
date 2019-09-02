@@ -7,7 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('services-index');
+  this.route('services', function() {
+    this.route('service');
+  });
 });
 
 export default Router;
