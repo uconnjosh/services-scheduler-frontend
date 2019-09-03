@@ -1,11 +1,29 @@
-<h1>{{model.title}}</h1>
-<p>{{model.description}}</p>
-<div class="flex">
-	{{#each model.images as |image|}}
-		<img
-			src="{{image.src}}"
-			class="w-30"
-		/>
-	{{/each}}
+<div>
+
+	<h1>
+		{{model.title}}
+	</h1>
+
+	<p>
+		{{model.description}}
+	</p>
+
+	<div class="flex">
+		{{#each model.images as |image|}}
+			<img
+				src="{{image.src}}"
+				class="w-30"
+			/>
+		{{/each}}
+	</div>
+
+	<ul>
+		{{#each model.occurrences as |occurrence|}}
+			<li>
+				{{occurrence.slots}} slots remaining
+			</li>
+		{{/each}}
+	</ul>
+
 </div>
 

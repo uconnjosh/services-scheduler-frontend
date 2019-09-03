@@ -6,4 +6,5 @@ export default Model.extend({
 	duration: DS.attr(),
 	description: DS.attr(),
 	images: DS.attr(),
+	occurrences: DS.hasMany('occurrence', {async: false})
 });
