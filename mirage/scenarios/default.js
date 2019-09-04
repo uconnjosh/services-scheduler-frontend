@@ -42,6 +42,16 @@ export default function(server) {
   })
 
   server.create('occurrence', {
+    service: service1,
+    starts() {
+      const dt = new Date()
+      dt.setHours(dt.getHours() + Math.floor(Math.random() * 36))
+      return dt
+    },
+    slots: 5
+  })
+
+  server.create('occurrence', {
     service: service2,
     starts: new Date(),
     slots: 2 
