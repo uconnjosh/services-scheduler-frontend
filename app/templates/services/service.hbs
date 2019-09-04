@@ -17,13 +17,11 @@
 		{{/each}}
 	</div>
 
-	<ul>
-		{{#each model.occurrences as |occurrence|}}
-			<li>
-				{{occurrence.slots}} slots remaining
-			</li>
-		{{/each}}
-	</ul>
+	{{#each model.occurrences as |occurrence|}}
+		<div>
+			{{occurrence.slots}} spaces open @ {{moment-calendar occurrence.starts}}
+		</div>
+	{{/each}}
 
 </div>
 

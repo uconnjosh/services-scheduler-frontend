@@ -8,6 +8,10 @@ body {
 	display: flex;
 }
 
+.justify-between {
+	justify-content: space-between;
+}
+
 .w-10 {
 	width: 10%;
 }
@@ -46,4 +50,9 @@ body {
 
 .w-100 {
 	width: 100%;
+}
+
+.px-md {
+	padding-left: 2rem;
+	padding-right: 2rem;
 }
