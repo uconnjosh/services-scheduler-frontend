@@ -1,5 +1,7 @@
 body {
 	font-family: sans-serif;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 // utilities
@@ -56,3 +58,25 @@ body {
 	padding-left: 2rem;
 	padding-right: 2rem;
 }
+
+// named classes
+.top-nav {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	min-height: 40px;
+	padding: 1rem;
+	background-color: grey;
+}
+
+.login {
+	position: absolute;
+	left: 50%;
+	top: 120px;
+	transform: translateX(-50%);
+	input {
+		min-height: 30px;
+		text-indent: 12px;
+	}
+}
+

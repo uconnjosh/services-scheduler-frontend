@@ -5,6 +5,7 @@ export default function() {
   this.get('/services/:id');
   this.get('/occurrences');
   this.get('/occurrences/:id');
+  this.get('/consumers')
 
   // These comments are here to help you get started. Feel free to delete them.
 

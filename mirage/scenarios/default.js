@@ -8,6 +8,12 @@ export default function(server) {
   // server.createList('service', 3);
   // server.loadFixtures('services');
   // server.createList('occurrence', 4, { service: services[0]})
+  const consumer1 = server.create('consumer', {
+    firstName: 'Ru',
+    lastName: 'Paul',
+    email: 'rupaul@hotmail.com'
+  })
+
   const service1 = server.create('service', {
   	title: "Flow Basics (Level 1)",
   	duration: "75",

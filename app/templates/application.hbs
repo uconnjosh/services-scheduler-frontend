@@ -1,1 +1,12 @@
+<div class="top-nav">
+
+	<div>
+		{{!-- <LinkTo>Signup</LinkTo> --}}
+
+		<LinkTo @route="login">Login</LinkTo>
+		<h1>authenticated? {{session.authenticated}}</h1>
+	</div>
+
+</div>
+
 {{outlet}}

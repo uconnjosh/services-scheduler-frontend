@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('services', function() {
     this.route('service',  { path: '/:id' });
   });
+  this.route('login');
 });
 
 export default Router;
