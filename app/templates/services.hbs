@@ -8,7 +8,7 @@
 
 		<ul>
 			{{#each model as |service|}}
-				<LinkTo @route="services.service" @model={{service}}>
+				<LinkTo @route="services.service" @model={{service.id}}>
 					<li>
 						{{service.title}} | {{service.duration}}
 					</li>

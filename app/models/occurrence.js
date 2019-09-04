@@ -6,5 +6,4 @@ export default Model.extend({
 	providers: DS.hasMany('provider'),
 	consumers: DS.hasMany('consumer'),
 	slots: DS.attr(),
-	service: DS.belongsTo('service')
 });
