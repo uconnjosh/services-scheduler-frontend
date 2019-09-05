@@ -7,7 +7,7 @@ export default Service.extend({
 	login(email) {
 		return this.store.query('consumer', {
 			filter: {
-				email
+				email: email
 			}
 		}).then((foundConsumer) => {
 			if (foundConsumer) {

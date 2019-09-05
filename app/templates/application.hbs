@@ -3,8 +3,11 @@
 	<div>
 		{{!-- <LinkTo>Signup</LinkTo> --}}
 
-		<LinkTo @route="login">Login</LinkTo>
-		<h1>authenticated? {{session.authenticated}}</h1>
+		{{#if session.authenticated}}
+			<p>Hi! {{session.authenticated.email}}</p>
+		{{else}}
+			<LinkTo @route="login">Login</LinkTo>
+		{{/if}}
 	</div>
 
 </div>
