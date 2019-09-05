@@ -6,6 +6,12 @@ export default function() {
   this.get('/occurrences');
   this.get('/occurrences/:id');
   this.get('/consumers')
+  this.get('/consumers/:email')
+  this.get('/consumers/:email', (schema, request) => {
+    const email = JSON.parse(request.requestBody).email;
+
+    debugger
+  })
 
   // These comments are here to help you get started. Feel free to delete them.
 

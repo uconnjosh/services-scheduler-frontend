@@ -5,11 +5,11 @@ export default Controller.extend({
 	session: service(),
 	actions: {
 		login() {
-			this.session.login(this.email).then((result) => {
-				if (this.session.authenticated) {
-					this.transitionToRoute('services');
-				}
-			})
+			let { email, password } = this.getProperties('email', 'password');
+
+      this.get('session').authenticate('authenticator:oauth2', email, password).catch((reason) => {
+        this.set('errorMessage', reason.error || reason);
+      });
 		},
 
 		cancel() {
