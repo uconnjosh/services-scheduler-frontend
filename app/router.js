@@ -11,6 +11,7 @@ Router.map(function() {
     this.route('service',  { path: '/:id' });
   });
   this.route('login');
+  this.route('signup');
 });
 
 export default Router;

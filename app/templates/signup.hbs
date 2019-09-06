@@ -1,0 +1,19 @@
+<div class="login">
+
+	<Input placeholder="First Name" @value={{this.firstName}} />
+
+  <Input placeholder="Last Name" @value={{this.lastName}} />
+
+  <Input placeholder="email" @value={{this.email}} />
+
+  <Input placeholder="password" @value={{this.password}} />
+
+	<div>
+
+		<button {{action "signup"}}>Signup</button>
+
+		<button {{action "cancel"}}>Cancel</button>
+
+	</div>
+	
+</div>

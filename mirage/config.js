@@ -7,6 +7,15 @@ export default function() {
   this.get('/occurrences/:id');
   this.get('/consumers')
   this.get('/consumers/:id')
+  this.post('/consumers', (schema, request) => {
+    const resp = JSON.parse(request.requestBody).data.attributes
+    const firstName = resp["first-name"]
+    const lastName = resp["last-name"]
+    const email = resp["email"];
+    const password = resp["password"];
+
+    return schema.consumers.create({ firstName, lastName, email, password });
+  })
   this.post('/consumer-login', (schema, request) => {
     const resp = JSON.parse(request.requestBody)
     const email = resp.email;
