@@ -10,6 +10,8 @@ export default Controller.extend({
       this.get('session').authenticate('authenticator:custom', email, password).then(() => {
         this.session.set('currentUser', this.store.findRecord('consumer', this.session.data.authenticated.consumerId))
         this.transitionToRoute('services');
+      }).catch(() => {
+        alert('no account found!')
       });
     },
 

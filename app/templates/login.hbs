@@ -1,15 +1,21 @@
 <div class="login">
 
-	<Input placeholder="email" @value={{this.email}} />
+  <Input placeholder="email" @value={{this.email}} />
 
-	<Input placeholder="password" @value={{this.password}} />
+  <Input placeholder="password" @value={{this.password}} />
 
-	<div>
+  <div>
 
-		<button {{action "login"}}>Login</button>
+    <button {{action "login"}}>Login</button>
 
-		<button {{action "cancel"}}>Cancel</button>
+    <button {{action "cancel"}}>Cancel</button>
 
-	</div>
-	
+  </div>
+
+  <h3>Test account:</h3>
+  <p>
+    email: rupaul@hotmail.com<br />
+    password: password
+  </p>
+  
 </div>

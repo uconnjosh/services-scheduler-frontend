@@ -11,11 +11,19 @@ export default Base.extend({
     }
   },
   authenticate(email, password) {
-    return this.get('ajax').post('/api/consumer-login', {
-      data: {
-        email: email,
-        password: password
-      }
+    return new Promise((resolve, reject) => {
+      return this.get('ajax').post('/api/consumer-login', {
+        data: {
+          email: email,
+          password: password
+        }
+      }).then((resp) => {
+        if (parseInt(resp.consumerId)) {
+          resolve(resp)
+        } else {
+          reject()
+        }
+      })
     })
   },
   invalidate(data) {
