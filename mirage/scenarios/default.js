@@ -8,10 +8,11 @@ export default function(server) {
   // server.createList('service', 3);
   // server.loadFixtures('services');
   // server.createList('occurrence', 4, { service: services[0]})
-  const consumer1 = server.create('consumer', {
+  server.create('consumer', {
     firstName: 'Ru',
     lastName: 'Paul',
-    email: 'rupaul@hotmail.com'
+    email: 'rupaul@hotmail.com',
+    password: 'password'
   })
 
   const service1 = server.create('service', {

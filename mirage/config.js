@@ -6,11 +6,18 @@ export default function() {
   this.get('/occurrences');
   this.get('/occurrences/:id');
   this.get('/consumers')
-  this.get('/consumers/:email')
-  this.get('/consumers/:email', (schema, request) => {
-    const email = JSON.parse(request.requestBody).email;
+  this.get('/consumers/:id')
+  this.post('/consumer-login', (schema, request) => {
+    const resp = JSON.parse(request.requestBody)
+    const email = resp.email;
+    const password = resp.password;
+    const foundConsumer = schema.consumers.findBy({email: email})
 
-    debugger
+    if (foundConsumer && foundConsumer.attrs.password === password) {
+      return {consumerId: foundConsumer.id}
+    } else {
+      return false
+    }
   })
 
   // These comments are here to help you get started. Feel free to delete them.

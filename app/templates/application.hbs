@@ -4,7 +4,7 @@
 		{{!-- <LinkTo>Signup</LinkTo> --}}
 
 		{{#if session.isAuthenticated}}
-			<p>Hi! {{session.authenticated.email}}</p>
+			<p>Hi! {{session.currentUser.firstName}}</p>
 		{{else}}
 			<LinkTo @route="login">Login</LinkTo>
 		{{/if}}
