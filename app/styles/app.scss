@@ -1,82 +1,86 @@
 body {
-	font-family: sans-serif;
-	margin: 0;
-	box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 // utilities
 
 .flex {
-	display: flex;
+  display: flex;
 }
 
 .justify-between {
-	justify-content: space-between;
+  justify-content: space-between;
 }
 
 .w-10 {
-	width: 10%;
+  width: 10%;
 }
 
 .w-20 {
-	width: 20%;
+  width: 20%;
 }
 
 .w-30 {
-	width: 30%;
+  width: 30%;
 }
 
 .w-40 {
-	width: 40%;
+  width: 40%;
 }
 
 .w-50 {
-	width: 50%;
+  width: 50%;
 }
 
 .w-60 {
-	width: 60%;
+  width: 60%;
 }
 
 .w-70 {
-	width: 70%;
+  width: 70%;
 }
 
 .w-80 {
-	width: 80%;
+  width: 80%;
 }
 
 .w-90 {
-	width: 90%;
+  width: 90%;
 }
 
 .w-100 {
-	width: 100%;
+  width: 100%;
 }
 
 .px-md {
-	padding-left: 2rem;
-	padding-right: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 // named classes
 .top-nav {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	min-height: 40px;
-	padding: 1rem;
-	background-color: grey;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 40px;
+  padding: 1rem;
+  background-color: grey;
 }
 
 .login {
-	position: absolute;
-	left: 50%;
-	top: 120px;
-	transform: translateX(-50%);
-	input {
-		min-height: 30px;
-		text-indent: 12px;
-	}
+  position: absolute;
+  left: 50%;
+  top: 120px;
+  transform: translateX(-50%);
+  input {
+    min-height: 30px;
+    text-indent: 12px;
+  }
 }
 

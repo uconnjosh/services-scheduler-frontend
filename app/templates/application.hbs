@@ -1,14 +1,20 @@
 <div class="top-nav">
 
-	<div>
-		{{!-- <LinkTo>Signup</LinkTo> --}}
+  <div>
+    {{!-- <LinkTo>Signup</LinkTo> --}}
 
-		{{#if session.isAuthenticated}}
-			<p>Hi! {{session.currentUser.firstName}}</p>
-		{{else}}
-			<LinkTo @route="login">Login</LinkTo>
-		{{/if}}
-	</div>
+    {{#if session.isAuthenticated}}
+      <span>Hi! {{session.currentUser.firstName}}</span>
+      (<a
+        {{action 'invalidateSession'}}
+        class="cursor-pointer"
+      >
+        logout
+      </a>)
+    {{else}}
+      <LinkTo @route="login">Login</LinkTo>
+    {{/if}}
+  </div>
 
 </div>
 
