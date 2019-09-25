@@ -16,6 +16,14 @@ export default function() {
 
     return schema.consumers.create({ firstName, lastName, email, password });
   })
+  this.post('/services', (schema, request) => {
+    const resp = JSON.parse(request.requestBody).data.attributes
+    const title = resp["title"]
+    const duration = resp["duration"]
+    const description = resp["description"]
+
+    return schema.consumers.create({ title, duration, description });
+  })
   this.post('/consumer-login', (schema, request) => {
     const resp = JSON.parse(request.requestBody)
     const email = resp.email;

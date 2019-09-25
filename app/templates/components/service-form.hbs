@@ -1,0 +1,43 @@
+<div class="main-content">
+  <form>
+
+    <div>
+      <label for="title">
+        Title
+      </label>
+      <Input @id="title" @value={{this.model.title}} />
+    </div>
+
+    <div>
+      <label for="duration">
+        Duration
+      </label>
+      <Input @id="duration" @value={{this.model.duration}} />
+    </div>
+
+    <div>
+      <label for="description">
+        Description
+      </label>
+      <Input @id="description" @value={{this.model.description}} />
+    </div>
+
+    <div>
+      <button {{action "save"}}>
+        Save
+      </button>
+
+      <button {{action "reset"}}>
+        Reset Fieldss
+      </button>
+
+      <button {{action "cancel"}}>
+        Cancel
+      </button>
+    </div>
+
+  </form>
+</div>
+
+
+

@@ -10,6 +10,6 @@ export default Route.extend({
       this.session.set('currentUser', this.store.findRecord('consumer', restoredConsumerId))
     }
 
-    this.transitionTo('services');
+    // this.transitionTo('services');
   }
 });
