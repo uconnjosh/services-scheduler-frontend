@@ -6,16 +6,7 @@
 			{{t "services_type"}}	
 		</h1>
 
-		<ul>
-			{{#each model as |service|}}
-				<LinkTo @route="services.service" @model={{service.id}}>
-					<li>
-						{{service.title}} | {{service.duration}}
-					</li>
-				</LinkTo>
-			{{/each}}
-		</ul>
-
+		<ServiceList @model={{model}}/>
 	</div>
 
 	<div class="w-50 px-md">

@@ -1,0 +1,10 @@
+<ul>
+  {{#each model as |service|}}
+    {{!-- todo: create new route and link for admin/service --}}
+    <LinkTo @route="services.service" @model={{service.id}}>
+      <li>
+        {{service.title}} | {{service.duration}}
+      </li>
+    </LinkTo>
+  {{/each}}
+</ul>
