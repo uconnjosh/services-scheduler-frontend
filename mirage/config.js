@@ -3,6 +3,7 @@ export default function() {
 
   this.get('/services');
   this.get('/services/:id');
+  this.del('/services/:id')
   this.get('/occurrences');
   this.get('/occurrences/:id');
   this.get('/consumers')

@@ -1,4 +1,21 @@
-{{outlet}}
-<h1>Services:</h1>
+<div class="flex justify-between">
 
-<ServiceList @model={{model}} />
+  <div class="w-30 px-md">
+    <ul>
+      {{#each model as |service|}}
+        <LinkTo
+          @route="admin.services.service"
+          @model={{service.id}}
+        >
+          <li>
+            {{service.title}} | {{service.duration}}
+          </li>
+        </LinkTo>
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class="w-50 px-md">
+    {{outlet}}
+  </div>
+</div>

@@ -1,3 +1,4 @@
+{{!-- TODO: merge this and the edit / new form --}}
 <div>
 
   <h1>
@@ -15,6 +16,15 @@
         class="w-30"
       />
     {{/each}}
+  </div>
+
+  <div>
+    <button>
+      Add to Schedule
+    </button>
+    <button {{action "destroyService"}}>
+      Delete Service
+    </button>
   </div>
 
   {{#each model.occurrences as |occurrence|}}
