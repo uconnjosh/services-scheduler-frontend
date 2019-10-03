@@ -14,7 +14,7 @@ Router.map(function() {
   this.route('signup');
   this.route('admin', function() {
     this.route('services', function() {
-      this.route('new', { path: '/'});
+      this.route('new', { path: '/new'});
       this.route('service', { path: '/:id'});
     });
   });

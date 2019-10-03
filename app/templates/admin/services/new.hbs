@@ -1,5 +1,15 @@
-<h4>
-  New Service
-</h4>
+<div class="main-content">
 
-<ServiceForm @model={{model}} />
+  <ServiceForm @model={{model}}/>
+
+  <div>
+
+    <button {{action "save"}}>
+      Save
+    </button>
+
+    <button {{action 'cancel'}}>Cancel</button>
+
+  </div>
+
+</div>
