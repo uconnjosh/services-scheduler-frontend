@@ -17,14 +17,16 @@ export default function() {
 
     return schema.consumers.create({ firstName, lastName, email, password });
   })
-  this.post('/services', (schema, request) => {
-    const resp = JSON.parse(request.requestBody).data.attributes
-    const title = resp["title"]
-    const duration = resp["duration"]
-    const description = resp["description"]
+  this.post('/services')
+  // this.post('/services', (schema, request) => {
+  //   const resp = JSON.parse(request.requestBody).data.attributes
+  //   const title = resp["title"]
+  //   const duration = resp["duration"]
+  //   const description = resp["description"]
 
-    return schema.services.create({ title, duration, description });
-  })
+  //   return schema.services.create({ title, duration, description });
+  // })
+  this.patch('/services/:id')
   this.post('/consumer-login', (schema, request) => {
     const resp = JSON.parse(request.requestBody)
     const email = resp.email;

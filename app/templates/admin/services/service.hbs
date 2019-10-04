@@ -1,13 +1,6 @@
-{{!-- TODO: merge this and the edit / new form --}}
-<div>
+<div class="main-content">
 
-  <h1>
-    {{model.title}}
-  </h1>
-
-  <p>
-    {{model.description}}
-  </p>
+  <ServiceForm @model={{model}}/>
 
   <div class="flex">
     {{#each model.images as |image|}}
@@ -22,8 +15,11 @@
     <button>
       Add to Schedule
     </button>
+    <button {{action "save"}}>
+      Save
+    </button>
     <button {{action "destroyService"}}>
-      Delete Service
+      Delete
     </button>
   </div>
 
