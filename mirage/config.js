@@ -23,7 +23,7 @@ export default function() {
     const duration = resp["duration"]
     const description = resp["description"]
 
-    return schema.consumers.create({ title, duration, description });
+    return schema.services.create({ title, duration, description });
   })
   this.post('/consumer-login', (schema, request) => {
     const resp = JSON.parse(request.requestBody)
