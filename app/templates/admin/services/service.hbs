@@ -1,4 +1,4 @@
-<div class="main-content">
+<div>
 
   <ServiceForm @model={{model}}/>
 
@@ -28,6 +28,10 @@
       Signup! {{moment-calendar occurrence.starts}}
     </div>
   {{/each}}
+
+  <PowerCalendar as |calendar|>
+    <calendar.Days/>
+  </PowerCalendar>
 
 </div>
 
